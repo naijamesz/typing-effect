@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div class="textarea-block">
+        <div class="block-container">
+          <div class="textarea-container">
+            <textarea
+              id="textarea"
+              class="textarea"
+              cols="60"
+              rows="8"
+              placeholder="Type something ..."
+              maxlength="100"
+              spellcheck="false"></textarea>
+            <div id="textarea-display" class="textarea-display"></div>
+          </div>
+          <div class="text-tool">
+            <div class="text-tool-left">
+              <img
+                src="https://icons.craftwork.design/static/media/Text.2730ce8be0a4c57bd56032cadaedfcc3.svg"
+                alt="Text"
+                width="20"
+                onclick="changeAnimation('animate__fadeInDown', this, 1)" />
+              <img
+                src="https://icons.craftwork.design/static/media/Bold.f8470ed7c9fe05f9dc263bf6b2a89a9f.svg"
+                alt="Bold"
+                width="20"
+                onclick="changeAnimation('animate__jackInTheBox', this, 2)" />
+              <img
+                src="https://icons.craftwork.design/static/media/Italic.8064c2bc51617afffbc97fa67b60a114.svg"
+                alt="Italic"
+                width="20"
+                onclick="changeAnimation('animate__lightSpeedInLeft', this, 3)" />
+              <img
+                src="https://icons.craftwork.design/static/media/TextBlock.8b46ffb5bba3925271d206b2d588ba24.svg"
+                alt="Typing Effect"
+                width="20"
+                onclick="changeAnimation('animate__zoomOutDown', this, 4)" />
+              <img
+                src="https://icons.craftwork.design/static/media/Eraser.b2517d9ec347e52a2b3db33988e9f78e.svg"
+                alt="Eraser"
+                width="20"
+                onclick="changeAnimation('animate__hinge', this, 5)" />
+            </div>
+            <div class="text-tool-right">
+              <button class="button" id="twitter" title="Tweet This!">
+                <i class="fab fa-twitter"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/script.js" defer></script>
+  </body>
+</html>

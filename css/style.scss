@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  display: inline-block;
+}
+
+body {
+  height: 100%;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #3a4f70;
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    min-height: 25rem;
+    max-height: 100vh;
+    background-color: #f5f8fd;
+    overflow: hidden;
+
+    .textarea-block {
+      z-index: 1;
+      width: calc(100% - 40px);
+      max-width: 38rem;
+      height: 17rem;
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 16px 40px #7a82f133;
+
+      .block-container {
+        width: 100%;
+        height: 100%;
+
+        .textarea-container {
+          position: relative;
+          width: 100%;
+          height: 12rem;
+          padding: 1.5rem;
+
+          .textarea {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            padding: 1.5rem;
+            border: none;
+            outline: none;
+            line-height: 2;
+            color: #ffffff00;
+            caret-color: #7ba4e8;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1rem;
+            background: none;
+            resize: none;
+            word-wrap: break-word;
+            word-break: break-all;
+          }
+
+          .textarea-display {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 1.5rem;
+            line-height: 2;
+            word-wrap: break-word;
+            overflow: hidden;
+            white-space: pre-wrap;
+          }
+        }
+
+        .text-tool {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          height: 4.5rem;
+          padding: 1.5rem;
+
+          .text-tool-left {
+            display: flex;
+
+            img {
+              width: 20px;
+              margin-right: 15px;
+              opacity: 0.5;
+              transition: 250ms;
+
+              &:hover {
+                opacity: 0.75;
+                cursor: pointer;
+              }
+            }
+          }
+
+          .text-tool-right {
+            button {
+              transition: 20ms;
+              cursor: pointer;
+              font-size: 1.5rem;
+              height: 2.475rem;
+              border: none;
+              border-radius: 0.75rem;
+              color: #fff;
+              background-color: #23a6d5;
+              outline: none;
+              padding: 0.5rem 1.8rem 0.5rem 1.8rem;
+              box-shadow: 0 0.2rem rgba(121, 121, 121, 0.65);
+
+              &:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+                filter: brightness(150%);
+              }
+
+              &:active {
+                transform: translate(0, 0.3rem);
+                box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+              }
+              .twitter-button:hover {
+                color: #38a1f3;
+              }
+
+              .fa-twitter {
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+::placeholder {
+  color: #040b1844;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation-name: fadein;
+  animation-duration: 350ms;
+  animation-timing-function: ease-in;
+}
